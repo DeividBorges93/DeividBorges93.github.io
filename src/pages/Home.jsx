@@ -7,9 +7,9 @@ export default function Home() {
     <div>
       <Header /> 
       <div className="container-home">
-        <div className="back-ground-div">
-          <div className="translucide-div">
-            <img src={LogoDeivid} alt="logo-deivid" className="logo-img" />
+        <div className="back-ground-home">
+          <div className="translucide-div-home">
+            <img src={LogoDeivid} alt="logo-deivid" className="logo-img-home" />
           </div>
         </div>
       </div>
