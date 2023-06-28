@@ -6,7 +6,7 @@
   border:0;
   }
 
-.back-ground-div {
+.back-ground-home {
   width: 100vw;
   height: 100vh;
   background-image: url('../../assets/portfolio-image.png');
@@ -14,26 +14,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow:hidden
-
+  overflow:hidden;
 }
 
-.translucide-div {
-  background-color: #006064;
-  margin-top: 90px;
-  padding-bottom: 160px;
-  height: 50vh;
-  width: 50vw;
-  opacity: 85%;
-  border-radius: 50px;
+.translucide-div-home {
+  background: linear-gradient(180deg, var(--dark-green-1), 35%, var(--dark-green-2) 100%);
+  width: 100vw;
+  height: 100vh;
+  opacity: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo-img {
-  margin-top: 120px;
-  width: 80%;
+.logo-img-home {
+  width: 40%;
   height: auto;
 
 }
