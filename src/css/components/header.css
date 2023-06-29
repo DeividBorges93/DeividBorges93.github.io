@@ -1,25 +1,10 @@
-:root {
-  --dark-green-1: #004D40;
-  --dark-green-2: #006064;
-  --light-cyan-3: #b4edf2;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  vertical-align: baseline;
-  list-style: none;
-  border: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
 .header {
   width: 100%;
   transition: height 0.7s ease, opacity 0.5s ease;
 }
 
 .container-header {
-  z-index: 1;
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   position: fixed;
