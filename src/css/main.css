@@ -1,0 +1,21 @@
+:root {
+  --dark-green-1: #004D40;
+  --dark-green-2: #006064;
+  --light-cyan-3: #b4edf2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-image: url('../assets/portfolio-image.png');
+}

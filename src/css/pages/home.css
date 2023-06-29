@@ -1,27 +1,4 @@
-* {
-  padding:0;
-  margin:0;
-  vertical-align:baseline;
-  list-style:none;
-  border:0;
-  }
-
-.back-ground-home {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('../../assets/portfolio-image.png');
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow:hidden;
-}
-
-.translucide-div-home {
-  background: linear-gradient(180deg, var(--dark-green-1), 35%, var(--dark-green-2) 100%);
-  width: 100vw;
-  height: 100vh;
-  opacity: 80%;
+.div-logo-home {
   display: flex;
   align-items: center;
   justify-content: center;
