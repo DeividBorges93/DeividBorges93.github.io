@@ -10,13 +10,16 @@ export default function AboutMe() {
             <p className="about-me-title">Sobre mim...</p>
             <div className="about-me-text">
               <p className="paragraph">Olá, me chamo Deivid, sou residente de Palhoça-SC. Conhecida como a cidade bela por natureza.</p>
-              <p className="paragraph">E como não poderia ser diferente, por sempre ter vivido pertodo mar sou um amante das águas,
-                sempre que possível busco estar em contato com o mar, rio, cachoeira. É aonde sinto minhas energias recarregando.</p>
+              <p className="paragraph">Beleza essa cercada de água, tanto mar como rios e cachoeiras, e estar em contato com a água é algo mágico para mim. É aonde sinto minhas energias recarregando.</p>
               <br />
               <p className="paragraph">Me sinto um ser meio hibrído (kkkkk), ou adaptável pode-se assim dizer, pois consigo em um dia
               maravilhoso de sol preferir ficar em casa codando, estudando sem nenhum problema, quanto posso sair em um dia de chuva a noite
               para a praia invés de preferir ficar em casa assistindo um filme.</p>
-              <p className="paragraph">Sou formado como desenvolvedor fullstack desde 2022 pela escola <a className="about-me-text" href="https://www.betrybe.com/" >Trybe</a>.</p>
+              <br />
+              <p className="paragraph">E isso se reflete na minha vida profissional também, conseguindo me adaptar facilmente a pessoas
+              e lugares diferentes e/ou novos. Entre meus amigos sou conhecido por ser justo, o diplomata, aquele que consegue fazer o intermédio entre dois lados, ou mais.</p>
+              <br />
+              <p className="paragraph">Sou formado como desenvolvedor fullstack desde 2022 pela <a className="about-me-text" href="https://www.betrybe.com/" >Trybe</a>.</p>
               <br />
               <p className="paragraph">As principais ferramentas que trabalho são:</p>
               <p className="paragraph">JavaScript | TypeScript | Python | NodeJs</p>
