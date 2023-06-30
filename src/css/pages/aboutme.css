@@ -1,0 +1,40 @@
+.div-about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.text-div-about-me {
+  z-index: 3;
+  background: linear-gradient(180deg, var(--dark-green-1), 85%, var(--dark-green-2) 100%);
+  border-radius: 5px;
+  width: 60vw;
+  height: auto;
+  -webkit-box-shadow: 1px 3px 29px 5px rgba(0,0,0,0.79); 
+  box-shadow: 1px 3px 29px 5px rgba(0,0,0,0.79);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.about-me-title {
+  color: var(--light-cyan-3);
+  padding-top: 5px;
+  padding-right: 300px;
+  padding-bottom: 15px;
+  font-size: x-large;
+  text-align: center;
+}
+
+.about-me-text {
+  color: var(--light-cyan-3);
+  padding-top: 5px;
+  font-size: large;
+  text-align: center;
+}
+
+.paragraph {
+  line-height: 150%;
+}
