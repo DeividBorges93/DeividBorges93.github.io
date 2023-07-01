@@ -1,0 +1,30 @@
+.div-logo-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img-home {
+  width: 40%;
+  height: auto;
+}
+
+.render-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.div-icon-image {
+  width: 60px;
+}
+
+.stack-logo {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.stack-logo:hover {
+  transform: scale(1.2);
+}
