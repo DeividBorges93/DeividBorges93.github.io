@@ -5,7 +5,6 @@ import sendButton from '../assets/send-button.png';
 import logoLinkedin from '../assets/logo-linkedin.png';
 import logoGithub from '../assets/icons8-github-50.png';
 
-
 export default function SendEmail() {
   const [fromName, setFromName] = useState('');
   const [message, setMessage] = useState('');
@@ -20,7 +19,9 @@ export default function SendEmail() {
       email,
     }
 
-    emailjs.send('service_auccfzj', 'template_9cpi9j2', templateParams, 'gkWSGqGXoMlgokgu5')
+    const {REACT_APP_SERVICE_ID,REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
+
+    emailjs.send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, templateParams, REACT_APP_USER_ID)
 
     setFromName('');
     setMessage('');
