@@ -1,0 +1,108 @@
+.container-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-contatcs {
+  width: 60vw;
+  height: 90vh;
+  background: linear-gradient(180deg, var(--dark-green-1), 5%, var(--dark-green-2) 100%);
+  -webkit-box-shadow: 1px 3px 29px 5px rgba(0,0,0,0.79); 
+  box-shadow: 1px 3px 29px 5px rgba(0,0,0,0.79);
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-title {
+  color: var(--light-cyan-3);
+  padding-top: 15px;
+  padding-right: 170px;
+  padding-bottom: 15px;
+  align-self: self-end;
+  font-size: x-large;
+  text-align: center;
+}
+
+.div-send-email {
+  margin-top: 5%;
+}
+
+.form-div-send-email form{
+  margin: 0 50px;
+  -webkit-box-shadow: 1px 2px 8px 2px rgba(0,0,0,0.79); 
+  box-shadow: 1px 2px 8px 2px rgba(0,0,0,0.79);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  font-size: medium;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: var(--light-cyan-3);
+}
+
+.form-div-send-email label{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  font-size: small;
+  width: 80%;
+  color: var(--light-cyan-3);
+
+}
+
+.form-div-send-email label input {
+  margin-top: 5px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+}
+
+#message {
+  resize: none;
+  height: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.send-button {
+  background-color: transparent;
+}
+
+.send-button-icon {
+  margin-bottom: 10px;
+  background-color: transparent;
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+
+.send-button-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.div-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.icons {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.icons:hover {
+  transform: scale(1.2);
+}
