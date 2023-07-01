@@ -27,47 +27,75 @@ export default function SendEmail() {
     setEmail('');
   };
 
+  const getAndCheckValues = () => {
+    const submitButton = document.getElementById('send-button');
+    const inputName = document.getElementById('user-name');
+    const inputEmail = document.getElementById('user-email');
+    const inputMessage = document.getElementById('message');
+
+    const { value: name} = inputName;
+    const { value: emailValue} = inputEmail;
+    const { value: messageValue} = inputMessage;
+
+    const isValid = name.length >= 3 &&
+    name !== null &&
+    name !== '' &&
+    messageValue.length >= 15 &&
+    messageValue !== null &&
+    messageValue !== '' &&
+    emailValue.length >= 6 &&
+    emailValue !== null &&
+    emailValue !== '' &&
+    emailValue.includes('@');
+
+    if (isValid) (submitButton.disabled = false)
+    else (submitButton.disabled = true);
+
+    setEmail(emailValue);
+    setFromName(name);
+    setMessage(messageValue);
+  }
+
   return (
     <div className="container-contacts">
       <div className="div-contatcs">
-        <p className="contacts-title">Contato...</p>
         <div className="div-send-email">
           <div className="form-div-send-email">
             <form onSubmit={sendEmail}>
               <p className="form-title">Envie uma mensagem...</p>
-              <label htmlFor='user_name' >
-                Name
+              <label htmlFor='user-name' >
+                Nome
                 <input
                   type="text"
-                  name="user_name"
-                  id='user_name'
-                  onChange={(e) => setFromName(e.target.value)}
+                  name="user-name"
+                  id='user-name'
+                  onChange={getAndCheckValues}
                   value={fromName}
                   placeholder='Escreva seu nome...'
                   />
               </label>
-              <label htmlFor='user_email'>
+              <label htmlFor='user-email'>
                 Email
                 <input
                   type="email"
-                  name="user_email"
-                  id='user_email'
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="user-email"
+                  id='user-email'
+                  onChange={getAndCheckValues}
                   value={email}
                   placeholder='Escreva seu email...'
                   />
               </label>
               <label htmlFor='message'>
-                Message
+                Mensagem
                 <textarea
                   name="message"
                   id='message'
-                  onChange={(e) => setMessage(e.target.value)}
+                  onChange={getAndCheckValues}
                   value={message}
                   placeholder='Escreva sua mensagem...'
                   />
               </label>
-              <button type="submit" className='send-button'>
+              <button type="submit" className='send-button' id='send-button' disabled>
                 <img src={sendButton} alt="send button icon" className="send-button-icon" />
               </button>
             </form>
