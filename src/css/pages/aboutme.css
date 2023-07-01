@@ -7,7 +7,7 @@
 
 .text-div-about-me {
   z-index: 3;
-  background: linear-gradient(180deg, var(--dark-green-1), 35%, var(--dark-green-2) 100%);
+  background: linear-gradient(180deg, var(--dark-green-1), 5%, var(--dark-green-2) 100%);
   border-radius: 5px;
   width: 60vw;
   height: auto;

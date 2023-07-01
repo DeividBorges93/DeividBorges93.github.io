@@ -22,8 +22,8 @@ export default function Header() {
       <div className="container-header">
         <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/inicio'>Início</Link>
         <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/sobremim'>Sobre mim</Link>
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/projetos'>Projetos</Link>
         <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/contato'>Contato</Link>
+        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/projetos'>Projetos</Link>
       </div>
     </div>
   );

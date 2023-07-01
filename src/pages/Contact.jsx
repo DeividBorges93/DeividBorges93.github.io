@@ -1,7 +1,11 @@
 import Header from "../components/Header"
+import SendEmail from "../components/SendEmail"
 
 export default function Contact() {
   return (
-    <Header /> 
+    <div>
+      <Header />
+      <SendEmail />
+    </div>
   )
 };
