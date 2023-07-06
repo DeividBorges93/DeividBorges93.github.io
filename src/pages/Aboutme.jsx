@@ -9,24 +9,31 @@ export default function AboutMe() {
         <div className="text-div-about-me">
           <p className="about-me-title">Sobre mim...</p>
           <div className="about-me-text">
-            <p className="paragraph">Olá, me chamo Deivid, sou residente de Palhoça-SC. Conhecida como a cidade bela por natureza.</p>
-            <p className="paragraph">Beleza essa cercada de água, tanto mar como rios e cachoeiras, e estar em contato com a água é algo mágico para mim. É aonde sinto minhas energias recarregando.</p>
+            <p className="paragraph">Olá, eu sou o Deivid, e é um prazer recebê-lo em minha página!
+              Sou um desenvolvedor fullstack apaixonado por tecnologia e residente na bela cidade de Palhoça-SC, cercada por mar e rios.</p>
             <br />
-            <p className="paragraph">Me sinto um ser meio hibrído (kkkkk), ou adaptável pode-se assim dizer, pois consigo em um dia
-            maravilhoso de sol preferir ficar em casa codando, estudando sem nenhum problema, quanto posso sair em um dia de chuva a noite
-            para a praia invés de preferir ficar em casa assistindo um filme.</p>
+            <p className="paragraph">Estar em contato com a água é algo mágico para mim, uma fonte de renovação de energia. Sou como um ser híbrido (kkkk),
+              adaptável a diferentes situações. Em um dia ensolarado, posso me perder na emoção de ficar em casa codificando e estudando, sem nenhum problema.
+              Mas também posso ir em uma noite chuvosa à praia em vez de assistir a um filme em casa.</p>
             <br />
-            <p className="paragraph">E isso se reflete na minha vida profissional também, conseguindo me adaptar facilmente a pessoas
-            e lugares diferentes e/ou novos. Entre meus amigos sou conhecido por ser justo, o diplomata, aquele que consegue fazer o intermédio entre dois lados, ou mais.</p>
+            <p className="paragraph">Essa versatilidade e adaptabilidade também se refletem em minha vida profissional. Tenho facilidade em me adaptar a pessoas e ambientes diversos, sempre buscando o equilíbrio e a justiça. Entre meus amigos, sou conhecido como o diplomata, aquele que consegue fazer a ponte entre diferentes perspectivas e encontrar soluções em comum.</p>
             <br />
-            <p className="paragraph">Sou formado como desenvolvedor fullstack desde 2022 pela <a className="about-me-text" rel="noopener noreferrer" target="blank" href="https://www.betrybe.com/" >Trybe</a>.</p>
+            <p className="paragraph">Em 2022, concluí minha formação como desenvolvedor fullstack pela <a className="about-me-text" rel="noopener noreferrer" target="blank" href="https://www.betrybe.com/" >Trybe</a>,
+              adquirindo habilidades sólidas em diversas tecnologias. Minhas principais ferramentas incluem:</p>
             <br />
-            <p className="paragraph">As principais ferramentas que trabalho são:</p>
-            <p className="paragraph">JavaScript | TypeScript | Python | NodeJs</p>
-            <p className="paragraph">HTML5 | CSS3 | REACT | REDUX </p>
-            <p className="paragraph">Docker | Tailwind | MySQL</p>
-            <p className="paragraph">MongoDB | PostgreSQL</p>
-            <p className="paragraph">Sequelize | Prisma</p>
+            <ul>
+              <li>JavaScript | TypeScript | Python | NodeJs</li>
+              <li>HTML5 | CSS3 | React | Redux</li>
+              <li>Docker | Tailwind | MySQL</li>
+              <li>MongoDB | PostgreSQL</li>
+              <li>Sequelize | Prisma</li>
+            </ul>
+            <br />
+            <p className="paragraph">Estou constantemente buscando aprimorar meu conhecimento e acompanhar as últimas tendências tecnológicas. Acredito que a aprendizagem contínua é essencial para o sucesso na área de desenvolvimento de software.</p>
+            <br />
+            <p className="paragraph">Sinta-se à vontade para explorar meu portfólio e conhecer mais sobre meu trabalho e projetos. Estou aberto a oportunidades emocionantes e desafios que me permitam aplicar minhas habilidades e contribuir para o crescimento de uma equipe e organização inovadora.</p>
+            <br />
+            <p className="paragraph">Obrigado por visitar minha página, e espero que você tenha uma ótima experiência navegando pelo meu portfólio!</p>
           </div>
         </div>
       </div>
