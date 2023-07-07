@@ -5,14 +5,11 @@
 }
 
 .logo-img-home {
-  width: 40%;
-  height: auto;
+  width: 550px;
 }
 
 .render-images {
-  position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
 }
