@@ -71,26 +71,33 @@
 }
 
 .send-button {
-  background-color: transparent;
+  margin-top: 5px;
   transition: transform 0.3s ease;
+  transition: background 1s ease;
+  border-radius: 20px;
+  background: var(--dark-green-1);
 }
 
 .send-button-icon {
-  margin-bottom: 10px;
+  padding: 10px 60px;
   background-color: transparent;
   width: 40px;
+  
 }
 
 .send-button:disabled {
   cursor: not-allowed;
-
+  background: linear-gradient(180deg, var(--dark-green-1), 20%, var(--dark-green-2) 100%);
 }
 
 .send-button:enabled:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
+.send-button:enabled .send-button-icon {
+  color: var(--light-cyan-3);
+}
 
 .div-icons {
   display: flex;
