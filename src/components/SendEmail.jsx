@@ -1,7 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import '../css/components/sendEmail.css';
-import sendButton from '../assets/send-button.png';
 import logoLinkedin from '../assets/logo-linkedin.png';
 import logoGithub from '../assets/icons8-github-50.png';
 
@@ -97,7 +96,7 @@ export default function SendEmail() {
                   />
               </label>
               <button type="submit" className='send-button' id='send-button' disabled>
-                <img src={sendButton} alt="send button icon" className="send-button-icon" />
+                <p className='send-button-icon'>Enviar</p> 
               </button>
             </form>
             <div className="div-icons">
