@@ -6,13 +6,13 @@
   <a href="DeividBorges93.github.io" target="_blank" rel="noreferrer">
     <img src="src/assets/home-page.png">
   </a>
-  <a href="DeividBorges93.github.io" target="_blank" rel="noreferrer">
-    <p>Clique aqui ou na imagem para visitar o portfólio</p>
-  </a>
 </h1>
+<h3 align="center">
+  <a href="DeividBorges93.github.io" target="_blank" rel="noreferrer">
+      <p>Clique aqui ou na imagem para visitar o portfólio</p>
+    </a>
+</h3>
 
-<br>
-<br>
 <br>
 
 # Páginas 
@@ -27,7 +27,6 @@ O projeto possui atualmente 4 páginas:
 Possui também um HEADER que se esconde quando o mouse sai de cima, e retorna quando o mouse se aproxima.
 
 <br>
-<br>
 
 # Tecnologias utilizadas
 
@@ -37,14 +36,12 @@ Possui também um HEADER que se esconde quando o mouse sai de cima, e retorna qu
 * CSS3
 * Emailjs
 
-
 Nesse projeto decidi começar com JavaScript pois fazia algu mtempo que vinha desenvolvendo em TypeScript, pretendo fazer transição para TS como uma forma de estudo. 
 <br>
 Frontend feito com React, por ser uma framework que já tenho conhecimento. 
 <br>
 O CSS está puro pois me sinto mais livre em criar coisas direto do zero. 
 
-<br>
 <br>
 
 # Features futuras
