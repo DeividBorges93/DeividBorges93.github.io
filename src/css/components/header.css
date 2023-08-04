@@ -37,3 +37,7 @@
 .link-menu:hover {  
   transform: scale(1.2);
 }
+
+.link-menu.active {
+  color: var(--black);
+}

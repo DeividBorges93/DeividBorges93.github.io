@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/components/header.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [isHeaderVisible, setHeaderVisible] = useState(true);
@@ -12,7 +12,7 @@ export default function Header() {
   const handleMouseLeave = () => {
     setHeaderVisible(false);
   };
-  
+
   return (
     <div
       className={`header ${isHeaderVisible ? '' : 'hidden'}`}
@@ -20,10 +20,34 @@ export default function Header() {
       onMouseLeave={handleMouseLeave}
     >
       <div className="container-header">
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/inicio'>Início</Link>
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/sobremim'>Sobre mim</Link>
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/contato'>Contato</Link>
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/projetos'>Projetos</Link>
+      <NavLink
+          className="link-menu"
+          activeclassname="active"
+          to='/inicio'
+        >
+          Início
+        </NavLink>
+        <NavLink
+          className="link-menu"
+          activeclassname="active"
+          to='/sobremim'
+        >
+          Sobre mim
+        </NavLink>
+        <NavLink
+          className="link-menu"
+          activeclassname="active"
+          to='/contato'
+        >
+          Contato
+        </NavLink>
+        <NavLink
+          className="link-menu"
+          activeclassname="active"
+          to='/projetos'
+        >
+          Projetos
+        </NavLink>
       </div>
     </div>
   );
