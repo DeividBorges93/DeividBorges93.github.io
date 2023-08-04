@@ -23,3 +23,17 @@ body {
   background-image: url('../assets/portfolio-image.png');
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-green-1); 
+  border: 1px solid var(--light-cyan-3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark-green-1); 
+}
