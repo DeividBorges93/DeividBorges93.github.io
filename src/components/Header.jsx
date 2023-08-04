@@ -1,29 +1,74 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import '../css/components/header.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
-  const [isHeaderVisible, setHeaderVisible] = useState(true);
+  const containerHeaderRef = useRef(null);
+  let showSidebar = false;
 
-  const handleMouseEnter = () => {
-    setHeaderVisible(true);
+  const toogleSideBar = () => {
+    showSidebar = !showSidebar;
+    const containerHeader = containerHeaderRef.current;
+    const content = document.getElementById('content');
+
+    if (showSidebar) {
+      containerHeader.style.marginLeft = '0vw';
+      containerHeader.style.animationName = 'showSidebar';
+      content.style.filter = 'blur(2px)';
+    } else {
+      containerHeader.style.marginLeft = '-100vw';
+      containerHeader.style.animationName = '';
+      content.style.filter = 'none';
+    }
   };
 
-  const handleMouseLeave = () => {
-    setHeaderVisible(false);
-  };
-  
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && showSidebar) {
+      toogleSideBar();
+    }
+  })
+
   return (
-    <div
-      className={`header ${isHeaderVisible ? '' : 'hidden'}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="container-header">
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/inicio'>Início</Link>
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/sobremim'>Sobre mim</Link>
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/contato'>Contato</Link>
-        <Link className={`link-menu ${isHeaderVisible ? '' : 'hidden'}`} to='/projetos'>Projetos</Link>
+    <div  className='header' id='header'>
+      <button onClick={toogleSideBar} type='button' className="btn-menu-hamburguer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+          <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </button>
+      <div className="container-header" id='container-header' ref={containerHeaderRef}>
+        <button onClick={toogleSideBar} type='button' className="btn-menu-hamburguer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+        <NavLink
+            className="link-menu"
+            activeclassname="active"
+            to='/inicio'
+          >
+            Início
+          </NavLink>
+          <NavLink
+            className="link-menu"
+            activeclassname="active"
+            to='/sobremim'
+          >
+            Sobre mim
+          </NavLink>
+          <NavLink
+            className="link-menu"
+            activeclassname="active"
+            to='/contato'
+          >
+            Contato
+          </NavLink>
+          <NavLink
+            className="link-menu"
+            activeclassname="active"
+            to='/projetos'
+          >
+            Projetos
+          </NavLink>
       </div>
     </div>
   );

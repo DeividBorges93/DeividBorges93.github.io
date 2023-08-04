@@ -57,7 +57,7 @@ export default function SendEmail() {
   }
 
   return (
-    <div className="container-contacts">
+    <div className="container-contacts" id='content'>
       <div className="div-contatcs">
         <div className="div-send-email">
           <div className="form-div-send-email">
