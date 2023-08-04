@@ -35,3 +35,44 @@
 .link-menu.active:hover {
   transform: none;
 }
+
+.btn-menu-hamburguer {
+  display: none;
+  z-index: 98;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--light-cyan-3);
+}
+
+@media screen and (max-width: 768px) {
+  .btn-menu-hamburguer {
+    display: block;
+  }
+
+  .container-header {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    height: 100%;
+    width: 20vw;
+    border-radius: 10px;
+    animation-duration: 1s;
+    margin-left: -100vw;
+  }
+
+  .link-menu {
+    text-align: left;
+    width: auto;
+    overflow: hidden;
+  }
+}
+
+@keyframes showSidebar {
+  from {
+    margin-left: -100vw;
+  }
+  top {
+    margin-left: -10vw;
+  }
+}
