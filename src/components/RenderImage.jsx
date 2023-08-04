@@ -86,7 +86,7 @@ export default function RenderImages() {
   ]
 
   return (
-    <div>
+    <div className='container-home-page' id='content'>
       <div className="div-logo-home">
         <img src={logoDeivid} alt="logo-deivid" className="logo-img-home" />
       </div>

@@ -28,7 +28,7 @@ export default function RenderImages() {
     }
   ]
   return (
-    <div>
+    <div className='container-projects' id='content'>
       <div className="render-projects">
         {objProjects.map((project) => (
           <div className="card-projects">
