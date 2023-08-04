@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8b0e4b6b.css",
+    "main.js": "/static/js/main.5f92b840.js",
+    "static/media/portfolio-image.png": "/static/media/portfolio-image.88925d485d48f79876ff.png",
+    "static/media/logo-deivid.png": "/static/media/logo-deivid.df8ce13daf015bb2568e.png",
+    "static/media/tela-login-project-image.png": "/static/media/tela-login-project-image.1a152d8bee14c9193637.png",
+    "static/media/html-5.png": "/static/media/html-5.8a641848f40f4140b13f.png",
+    "static/media/end-point-login-backend.png": "/static/media/end-point-login-backend.7325b17fcb40317a1670.png",
+    "static/media/js.png": "/static/media/js.aa2e5317530cc7559aea.png",
+    "index.html": "/index.html",
+    "main.8b0e4b6b.css.map": "/static/css/main.8b0e4b6b.css.map",
+    "main.5f92b840.js.map": "/static/js/main.5f92b840.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b0e4b6b.css",
+    "static/js/main.5f92b840.js"
+  ]
+}
