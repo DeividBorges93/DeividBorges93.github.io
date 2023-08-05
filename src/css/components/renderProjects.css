@@ -57,3 +57,18 @@
   justify-content: center;
   padding-bottom: 10px;
 }
+
+@media screen and (max-width: 999px) {
+  .project-image {
+    max-width: 200px;
+  }
+
+  .render-projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-projects {
+    max-width: 80%;
+  }
+}
