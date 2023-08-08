@@ -8,39 +8,23 @@ export default function SendEmail() {
   const [fromName, setFromName] = useState('');
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
-  const [showWaitMessage, setShowWaitMessage] = useState(false);
 
-  const sendEmail = async (event) => {
+  const sendEmail = (event) => {
     event.preventDefault();
 
-    try {
-      setShowWaitMessage(true);
-
-      setTimeout(async () => {
-        const templateParams = {
-          from_name: fromName,
-          message,
-          email,
-        }
-
-        const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
-
-        await emailjs.send(
-          REACT_APP_SERVICE_ID,
-          REACT_APP_TEMPLATE_ID,
-          templateParams,
-          REACT_APP_USER_ID
-        );
-
-        setShowWaitMessage(false);
-        setFromName('');
-        setMessage('');
-        setEmail('');
-      }, 5000); //
-    } catch (error) {
-      console.error("Erro ao enviar o e-mail:", error);
-      setShowWaitMessage(false);
+    const templateParams = {
+      from_name: fromName,
+      message,
+      email,
     }
+
+    const {REACT_APP_SERVICE_ID,REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
+
+    emailjs.send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, templateParams, REACT_APP_USER_ID)
+
+    setFromName('');
+    setMessage('');
+    setEmail('');
   };
 
   const getAndCheckValues = () => {
@@ -77,10 +61,7 @@ export default function SendEmail() {
       <div className="div-contatcs">
         <div className="div-send-email">
           <div className="form-div-send-email">
-            
-            {showWaitMessage
-              ? <div className="wait-message"><p>Aguarde 5 segundos...</p></div> 
-              : <form onSubmit={sendEmail}>
+            <form onSubmit={sendEmail}>
               <p className="form-title">Envie uma mensagem...</p>
               <label htmlFor='user-name' >
                 Nome
@@ -117,8 +98,7 @@ export default function SendEmail() {
               <button type="submit" className='send-button' id='send-button' disabled>
                 <p className='send-button-icon'>Enviar</p> 
               </button>
-            </form> 
-              }
+            </form>
             <div className="div-icons">
               <a href='https://www.linkedin.com/in/deivid-borges/' target='blank' className="link-linkedin" rel="noopener noreferrer">
                 <img src={logoLinkedin} alt="" className="icons icon-linkedin" />
