@@ -1,4 +1,4 @@
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import '../css/components/sendEmail.css';
 import logoLinkedin from '../assets/logo-linkedin.png';
@@ -17,25 +17,25 @@ export default function SendEmail() {
       setShowWaitMessage(true);
 
       setTimeout(async () => {
-        const templateParams = {
-          from_name: fromName,
-          message,
-          email,
-        }
+        // const templateParams = {
+        //   from_name: fromName,
+        //   message,
+        //   email,
+        // }
 
-        const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
+        // const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
 
-        await emailjs.send(
-          REACT_APP_SERVICE_ID,
-          REACT_APP_TEMPLATE_ID,
-          templateParams,
-          REACT_APP_USER_ID
-        );
+        // await emailjs.send(
+        //   REACT_APP_SERVICE_ID,
+        //   REACT_APP_TEMPLATE_ID,
+        //   templateParams,
+        //   REACT_APP_USER_ID
+        // );
 
         setShowWaitMessage(false);
-        setFromName('');
-        setMessage('');
-        setEmail('');
+        // setFromName('');
+        // setMessage('');
+        // setEmail('');
       }, 5000); //
     } catch (error) {
       setShowWaitMessage(false);
@@ -78,7 +78,7 @@ export default function SendEmail() {
           <div className="form-div-send-email">
             
             {showWaitMessage
-              ? <div className="wait-message"><p>Aguarde 5 segundos...</p></div> 
+              ? <div className="wait-message"><p>Desabilitado temporariamente...</p></div> 
               : <form onSubmit={sendEmail}>
               <p className="form-title">Envie uma mensagem...</p>
               <label htmlFor='user-name' >

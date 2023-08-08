@@ -28,6 +28,11 @@
   margin-top: 8%;
 }
 
+.form-div-send-email .wait-message{
+  text-align: center;
+  padding: 150px 0px;
+}
+
 .form-div-send-email form{
   margin: 0 50px;
   border-radius: 5px;
