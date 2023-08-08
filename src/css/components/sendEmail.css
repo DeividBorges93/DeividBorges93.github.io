@@ -28,6 +28,13 @@
   margin-top: 8%;
 }
 
+.form-div-send-email .wait-message {
+  align-items: center;
+  text-align: center;
+  padding: 150px;
+  color: var(--light-cyan-3);
+}
+
 .form-div-send-email form{
   margin: 0 50px;
   border-radius: 5px;
