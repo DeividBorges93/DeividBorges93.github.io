@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Redirecting...</title>
-  <script>
-    const url = window.location.pathname.replace(/^\/+|\/+$/g, ''); // Remove leading and trailing slashes
-    window.location.replace('/' + (url || 'inicio')); // Redirect to the root or default route
-  </script>
+  <title>404 Page Not Found</title>
 </head>
 <body>
-  Se você não for redirecionado, <a href="/">clique aqui</a>.
+  <div id="root"></div>
+  <script>
+    const baseUrl = window.location.pathname.split('/').slice(0, -1).join('/');
+    window.history.replaceState(null, '', baseUrl + '/');
+  </script>
+  <script src="/static/js/main.js"></script>
 </body>
 </html>
