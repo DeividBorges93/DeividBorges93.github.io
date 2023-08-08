@@ -38,7 +38,6 @@ export default function SendEmail() {
         setEmail('');
       }, 5000); //
     } catch (error) {
-      console.error("Erro ao enviar o e-mail:", error);
       setShowWaitMessage(false);
     }
   };
