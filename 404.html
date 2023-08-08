@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Redirecting...</title>
+  <script>
+    const url = window.location.pathname.replace(/^\/+|\/+$/g, ''); // Remove leading and trailing slashes
+    window.location.replace('/' + (url || 'inicio')); // Redirect to the root or default route
+  </script>
+</head>
+<body>
+  Se você não for redirecionado, <a href="/">clique aqui</a>.
+</body>
+</html>
