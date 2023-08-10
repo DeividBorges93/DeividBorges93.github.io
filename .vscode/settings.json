@@ -1,0 +1,13 @@
+{
+  "conventionalCommits.scopes": [
+    "build",
+    "style-projects",
+    "assets",
+    "sendMessage",
+    "rotes",
+    "routes",
+    "footer",
+    "header",
+    "style"
+  ]
+}
