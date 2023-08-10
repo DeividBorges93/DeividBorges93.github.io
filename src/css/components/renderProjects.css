@@ -75,7 +75,7 @@
     flex-wrap: wrap;
     align-items: center;
     height: auto;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     /* overflow-x: hidden; */
 
   }
