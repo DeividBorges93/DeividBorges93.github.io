@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80vh;
 }
 
 .logo-img-home {
@@ -12,6 +13,8 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: center;
+  height: 20vh;
 }
 
 .stack-logo {

@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
 }
 
 .text-div-about-me {
@@ -16,6 +15,8 @@
   flex-direction: column;
   align-items: center;
   padding: 15px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .about-me-title {
