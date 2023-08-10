@@ -1,0 +1,27 @@
+.footer {
+  z-index: 99;
+  width: 100vw;
+}
+
+.container-footer {
+  background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  align-items: center;
+  height: 15vh;
+}
+
+.text-dev-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-dev-by p {
+  padding-right: 15px;
+}
+
+.logo-deivid {
+  max-width: 100px;
+}
