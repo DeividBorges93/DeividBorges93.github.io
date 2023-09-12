@@ -1,4 +1,4 @@
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import '../css/components/sendEmail.css';
 import logoLinkedin from '../assets/logo-linkedin.png';
@@ -6,36 +6,46 @@ import logoGithub from '../assets/icons8-github-50.png';
 
 export default function SendEmail() {
   const [fromName, setFromName] = useState('');
-  const [message, setMessage] = useState('');
+  const [text, setText] = useState('');
   const [email, setEmail] = useState('');
   const [showWaitMessage, setShowWaitMessage] = useState(false);
 
   const sendEmail = async (event) => {
-    event.preventDefault();
-
     try {
+      event.preventDefault();
       setShowWaitMessage(true);
 
+      const message = {
+        name: fromName,
+        email,
+        text,
+      }
+
+      await fetch('https://deivid-borges-portfolio-backend.onrender.com/save-message', {
+        method: 'POST',
+        body: JSON.stringify(message)
+      })
+
       setTimeout(async () => {
-        // const templateParams = {
-        //   from_name: fromName,
-        //   message,
-        //   email,
-        // }
+        const templateParams = {
+          from_name: fromName,
+          message,
+          email,
+        }
 
-        // const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
+        const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
 
-        // await emailjs.send(
-        //   REACT_APP_SERVICE_ID,
-        //   REACT_APP_TEMPLATE_ID,
-        //   templateParams,
-        //   REACT_APP_USER_ID
-        // );
+        await emailjs.send(
+          REACT_APP_SERVICE_ID,
+          REACT_APP_TEMPLATE_ID,
+          templateParams,
+          REACT_APP_USER_ID
+        );
 
         setShowWaitMessage(false);
-        // setFromName('');
-        // setMessage('');
-        // setEmail('');
+        setFromName('');
+        setText('');
+        setEmail('');
       }, 5000); //
     } catch (error) {
       setShowWaitMessage(false);
@@ -68,7 +78,7 @@ export default function SendEmail() {
 
     setEmail(emailValue);
     setFromName(name);
-    setMessage(messageValue);
+    setText(messageValue);
   }
 
   return (
@@ -109,7 +119,7 @@ export default function SendEmail() {
                   name="message"
                   id='message'
                   onChange={getAndCheckValues}
-                  value={message}
+                  value={text}
                   placeholder='Escreva sua mensagem...'
                   />
               </label>
