@@ -17,8 +17,8 @@ export default function SendEmail() {
 
       const message = {
         name: fromName,
+        message: text,
         email,
-        text,
       }
 
       await fetch('https://deivid-borges-portfolio-backend.onrender.com/save-message', {
@@ -29,7 +29,7 @@ export default function SendEmail() {
       setTimeout(async () => {
         const templateParams = {
           from_name: fromName,
-          message,
+          message: text,
           email,
         }
 
