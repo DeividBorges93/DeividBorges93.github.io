@@ -12,7 +12,7 @@ import logoTypescript from '../assets/stacks-icons/icons8-typescript-50.png';
 import logoJavaScript from '../assets/stacks-icons/js.png';
 import logoReact from '../assets/stacks-icons/icons8-react-native-68.png';
 
-import logoDeivid from '../assets/logo-deivid.png';
+import logoDeivid from '../assets/ezgif.com-optimize.gif';
 
 import '../css/components/renderImage.css';
 

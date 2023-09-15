@@ -17,36 +17,38 @@ export default function SendEmail() {
 
       const message = {
         name: fromName,
-        message: text,
         email,
+        text,
       }
 
       await fetch('https://deivid-borges-portfolio-backend.onrender.com/save-message', {
         method: 'POST',
-        body: JSON.stringify(message)
+        body: JSON.stringify(message),
       })
 
+      const templateParams = {
+        from_name: fromName,
+        message: text,
+        email,
+      }
+
+      const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
+
+      await emailjs.send(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        templateParams,
+        REACT_APP_USER_ID
+      );
+
+      setShowWaitMessage(false);
+      setFromName('');
+      setText('');
+      setEmail('');
+
       setTimeout(async () => {
-        const templateParams = {
-          from_name: fromName,
-          message: text,
-          email,
-        }
-
-        const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
-
-        await emailjs.send(
-          REACT_APP_SERVICE_ID,
-          REACT_APP_TEMPLATE_ID,
-          templateParams,
-          REACT_APP_USER_ID
-        );
-
-        setShowWaitMessage(false);
-        setFromName('');
-        setText('');
-        setEmail('');
-      }, 5000); //
+        
+      }, 5000);
     } catch (error) {
       setShowWaitMessage(false);
     }
@@ -88,7 +90,7 @@ export default function SendEmail() {
           <div className="form-div-send-email">
             
             {showWaitMessage
-              ? <div className="wait-message"><p>Desabilitado temporariamente...</p></div> 
+              ? <div className="wait-message"><p>Mensagem enviada! Aguarde 5 segundos para enviar outra...</p></div> 
               : <form onSubmit={sendEmail}>
               <p className="form-title">Envie uma mensagem...</p>
               <label htmlFor='user-name' >
