@@ -1,58 +1,87 @@
 import emailjs from '@emailjs/browser';
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import '../css/components/sendEmail.css';
 import axios from 'axios';
 import logoLinkedin from '../assets/logo-linkedin.png';
 import logoGithub from '../assets/icons8-github-50.png';
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+
+    if (delay !== null) {
+      const id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+    return () => {};
+  }, [delay]);
+}
 
 export default function SendEmail() {
   const [fromName, setFromName] = useState('');
   const [text, setText] = useState('');
   const [email, setEmail] = useState('');
   const [showWaitMessage, setShowWaitMessage] = useState(false);
+  const [countdown, setCountdown] = useState(5); 
+
+
+
+  useInterval(() => {
+    if (countdown > 0) {
+      setCountdown(countdown - 1);
+    } else {
+      setShowWaitMessage(false);
+      setFromName('');
+      setText('');
+      setEmail('');
+    }
+  }, showWaitMessage ? 1000 : null);
 
   const sendEmail = async (event) => {
     try {
       event.preventDefault();
       setShowWaitMessage(true);
-
-      const message = {
-        name: fromName,
-        email,
-        text,
-      }
-
-      const templateParams = {
-        from_name: fromName,
-        message: text,
-        email,
-      }
-  
-      const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
-
-    await axios({
-      method: 'post',
-      url: 'https://deivid-borges-portfolio-backend.onrender.com/save-message',
-      data: message
-    })
-
-    await emailjs.send(
-        REACT_APP_SERVICE_ID,
-        REACT_APP_TEMPLATE_ID,
-        templateParams,
-        REACT_APP_USER_ID
-      );
-
-      setFromName('');
-      setText('');
-      setEmail('');
-      setShowWaitMessage(false);
-
+      setCountdown(5); 
+      
       setTimeout(async () => {
-        
-      }, 5000);
+        const message = {
+          name: fromName,
+          email,
+          text,
+        }
+  
+        const templateParams = {
+          from_name: fromName,
+          message: text,
+          email,
+        }
+    
+        const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
+  
+      await axios({
+        method: 'post',
+        url: 'https://deivid-borges-portfolio-backend.onrender.com/save-message',
+        data: message
+      })
+  
+      await emailjs.send(
+          REACT_APP_SERVICE_ID,
+          REACT_APP_TEMPLATE_ID,
+          templateParams,
+          REACT_APP_USER_ID
+        );
+      }, 5000);  
+
     } catch (error) {
-      setShowWaitMessage(false);
+      throw error('Erro ao enviar mensagem');
     }
   };
 
@@ -92,7 +121,7 @@ export default function SendEmail() {
           <div className="form-div-send-email">
             
             {showWaitMessage
-              ? <div className="wait-message"><p>Mensagem enviada! Aguarde 5 segundos para enviar outra...</p></div> 
+              ? <div className="wait-message"><p>Mensagem enviada! Aguarde {countdown} segundos para enviar outra...</p></div> 
               : <form onSubmit={sendEmail}>
               <p className="form-title">Envie uma mensagem...</p>
               <label htmlFor='user-name' >
