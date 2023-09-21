@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import '../css/components/sendEmail.css';
+import axios from 'axios';
 import logoLinkedin from '../assets/logo-linkedin.png';
 import logoGithub from '../assets/icons8-github-50.png';
 
@@ -21,30 +22,31 @@ export default function SendEmail() {
         text,
       }
 
-      await fetch('https://deivid-borges-portfolio-backend.onrender.com/save-message', {
-        method: 'POST',
-        body: JSON.stringify(message),
-      })
-
       const templateParams = {
         from_name: fromName,
         message: text,
         email,
       }
-
+  
       const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
 
-      await emailjs.send(
+    await axios({
+      method: 'post',
+      url: 'https://deivid-borges-portfolio-backend.onrender.com/save-message',
+      data: message
+    })
+
+    await emailjs.send(
         REACT_APP_SERVICE_ID,
         REACT_APP_TEMPLATE_ID,
         templateParams,
         REACT_APP_USER_ID
       );
 
-      setShowWaitMessage(false);
       setFromName('');
       setText('');
       setEmail('');
+      setShowWaitMessage(false);
 
       setTimeout(async () => {
         
