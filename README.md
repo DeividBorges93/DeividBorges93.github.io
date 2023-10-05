@@ -3,12 +3,12 @@
 </h1>
 
 <h1 align="center">
-  <a href="https://deividborges93.github.io" target="_blank" rel="noreferrer">
+  <a href="https://deividborges.dev.br" target="_blank" rel="noreferrer">
     <img src="src/assets/home-page.png">
   </a>
 </h1>
 <h3 align="center">
-  <a href="https://deividborges93.github.io" target="_blank" rel="noreferrer">
+  <a href="https://deividborges.dev.br" target="_blank" rel="noreferrer">
       <p>Clique aqui ou na imagem para visitar o portfólio</p>
     </a>
 </h3>
