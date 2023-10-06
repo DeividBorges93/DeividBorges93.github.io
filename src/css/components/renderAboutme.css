@@ -6,7 +6,7 @@
 
 .text-div-about-me {
   z-index: 3;
-  background: linear-gradient(180deg, var(--dark-green-1), 5%, var(--dark-green-2) 100%);
+  background: linear-gradient(180deg, var(--dark-green-2), 5%, var(--dark-green-2) 100%);
   border-radius: 5px;
   height: auto;
   width: 60vw;
@@ -20,7 +20,7 @@
 }
 
 .about-me-title {
-  color: var(--light-cyan-3);
+  color: var(--dark-green-3);
   padding-top: 5px;
   padding-right: 300px;
   padding-bottom: 15px;
@@ -29,7 +29,7 @@
 }
 
 .about-me-text {
-  color: var(--light-cyan-3);
+  color: var(--dark-green-3);
   padding-top: 5px;
   font-size: large;
   text-align: center;

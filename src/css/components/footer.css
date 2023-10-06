@@ -1,6 +1,8 @@
 .footer {
   z-index: 99;
   width: 100vw;
+  color: var(--dark-green-3);
+
 }
 
 .container-footer {

@@ -15,7 +15,7 @@
 
 .link-menu {
   text-decoration: none;
-  color: var(--light-cyan-3);
+  color: var(--dark-green-3);
   font-size: large;
   text-align: center;
   transition: transform 0.3s ease;
@@ -27,7 +27,7 @@
 }
 
 .link-menu.active {
-  color: var(--black);
+  color: var(--light-cyan-3);
 }
 
 .link-menu.active:hover {
@@ -46,7 +46,7 @@
 @media screen and (max-width: 768px) {
   .btn-menu-hamburguer {
     display: block;
-    z-index: 98;
+    z-index: 99;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -56,7 +56,7 @@
   .container-header {
     position: absolute;
     top: 0;
-    width: 20vw;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     animation-duration: 1s;
@@ -66,7 +66,6 @@
   
   .links-menu {
     padding-top: 20px;
-    width: 20vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
