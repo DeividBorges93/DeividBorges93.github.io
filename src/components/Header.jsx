@@ -15,10 +15,14 @@ export default function Header() {
       containerHeader.style.marginLeft = '0vw';
       containerHeader.style.animationName = 'showSidebar';
       content.style.filter = 'blur(2px)';
+      content.style.pointerEvents = 'none';
+      content.style.cursor = 'default';
     } else {
       containerHeader.style.marginLeft = '-100vw';
       containerHeader.style.animationName = '';
       content.style.filter = 'none';
+      content.style.pointerEvents = '';
+      content.style.cursor = '';
     }
   };
 
