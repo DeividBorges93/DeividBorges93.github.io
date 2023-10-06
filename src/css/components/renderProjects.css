@@ -5,16 +5,53 @@
   height: 80vh;
 }
 
+.card-container {
+  display: flex;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: box-shadow 1s ease;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200PX;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--light-cyan-3);
+  z-index: 99;
+  width: 30px;
+  position: fixed;
+}
+
+.arrow:active {
+  background-color: var(--dark-green-3);
+
+}
+
+.left-arrow {
+  left: 0px;
+}
+
+.right-arrow {
+  right: 0px;
+}
+
+
 .render-projects {
   display: flex;
   justify-content: center;
   padding-top: 50px;
-  /* overflow-x: scroll; */
 }
 
 .card-projects {
   margin: 15px;
-  max-width: 45%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,11 +60,14 @@
   box-shadow: 0px 6px 22px -7px #000000;
   border-radius: 10px;
   transition: box-shadow 1s ease, transform 1s ease;
+  transform: scale(0.9);
+  opacity: 0.8;
 }
 
 .card-projects:hover {
-  transform: scale(1.05);
+  transform: scale(1.0);
   box-shadow: 0px 6px 15px -7px #000000;
+  opacity: 1; 
 }
 
 .project-image {
@@ -35,18 +75,26 @@
   padding: 15px;
 }
 
-.link-project {
-  color: var(--light-cyan-3);
+.link-repository-project, .link-deploy-project {
+  color: var(--dark-green-3);
 }
 
-.project-title {
+.link-repository-project:hover, .link-deploy-project:hover {
+  text-decoration: none;
+}
+
+.project-link, .project-title {
+  text-align: center;
   padding-bottom: 20px;
   font-size: large;
   transition: transform 0.2s ease;
-
 }
 
-.project-title:hover {
+.project-link {
+  font-size: medium;
+}
+
+.project-link:hover, .project-title:hover {
   transform: scale(1.05);
 }
 
@@ -62,24 +110,35 @@
   padding-bottom: 10px;
 }
 
-@media screen and (max-width: 999px) {
+
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: hidden;
+  }
   .project-image {
     max-width: 200px;
   }
 
-  .container-projects {
+  .container-projects{
+    margin-left: 90px;
     flex-direction: column;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
   }
-  
-  .render-projects {
-    flex-wrap: wrap;
-    align-items: center;
-    height: auto;
-    overflow-y: scroll;
-    /* overflow-x: hidden; */
 
+  .card-container {
+    overflow-y: auto;
   }
-  
+
+  .render-projects-mobile {
+    height: 100%;
+  }
+
+  .arrow {
+    display: none;
+  }
+
   .card-projects {
     max-width: 80%;
   }
