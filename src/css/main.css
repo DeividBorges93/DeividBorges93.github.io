@@ -1,9 +1,12 @@
 :root {
-  --black: #000;
-  --dark-green-1: #004D40;
-  --dark-green-2: #006064;
-  --dark-green-3: #011308;
-  --light-cyan-3: #b4edf2;
+  --black: #1d1c1c;
+  --dark-green-1: #264653;
+  --dark-green-2: #2d5261;
+  --dark-green-3: #396779;
+  --light-cyan-3: #416979;
+  --light-cyan-2: #c7c9ca;
+  --light-cyan-1: #959697;
+
 }
 
 * {
@@ -12,7 +15,6 @@
   vertical-align: baseline;
   list-style: none;
   border: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 body {
