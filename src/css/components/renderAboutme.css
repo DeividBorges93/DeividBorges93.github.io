@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 90%;
 }
 
 .text-div-about-me {
@@ -20,7 +21,7 @@
 }
 
 .about-me-title {
-  color: var(--dark-green-3);
+  color: var(--light-cyan-2);
   padding-top: 5px;
   padding-right: 300px;
   padding-bottom: 15px;
@@ -29,11 +30,33 @@
 }
 
 .about-me-text {
-  color: var(--dark-green-3);
-  padding-top: 5px;
+  color: var(--light-cyan-2);
+  padding: 20px;
   font-size: large;
-  text-align: center;
+  background-color: var(--dark-blue); /* Cor do balão */
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 10px; /* Espaçamento geral */
+  max-width: 600px;
+  position: relative;
 }
+
+/* Balões para a esquerda */
+.about-me-text:nth-of-type(odd) {
+  margin-left: 0;
+  margin-right: auto; /* Empurra o balão para a esquerda */
+  text-align: left;
+}
+
+/* Balões para a direita */
+.about-me-text:nth-of-type(even) {
+  margin-left: auto; /* Empurra o balão para a direita */
+  margin-right: 0;
+  text-align: right;
+}
+
+
+
 
 .paragraph {
   line-height: 150%;
