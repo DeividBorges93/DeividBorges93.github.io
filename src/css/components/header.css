@@ -8,6 +8,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.options-menu {
+  padding: 5px;
+  margin: 5px;
+  background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
+}
+
 .links-menu {
   width: 100vw;
   display: flex;
@@ -23,8 +31,16 @@
   padding: 5px;
 }
 
-.link-menu:hover {  
+.options-menu:hover {  
   transform: scale(1.1);
+}
+
+.options-menu.active {
+  color: var(--light-cyan-3);
+}
+
+.link-menu.active:hover {
+  transform: none;
 }
 
 .link-menu.active {
