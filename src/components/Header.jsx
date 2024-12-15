@@ -48,34 +48,47 @@ export default function Header() {
           </button>
         </div>
         <div className="links-menu">
-          <NavLink
-            className="link-menu"
-            activeclassname="active"
-            to='/inicio'
-          >
-            Início
-          </NavLink>
-          <NavLink
-            className="link-menu"
-            activeclassname="active"
-            to='/sobremim'
-          >
-            Sobre mim
-          </NavLink>
-          <NavLink
-            className="link-menu"
-            activeclassname="active"
-            to='/contato'
-          >
-            Contato
-          </NavLink>
-          <NavLink
-            className="link-menu"
-            activeclassname="active"
-            to='/projetos'
-          >
-            Projetos
-          </NavLink>
+          
+          
+          
+          
+          <div className="options-menu">
+            <NavLink
+              className="link-menu"
+              activeclassname="active"
+              to='/inicio'
+            >
+              Início
+            </NavLink>
+          </div>
+          <div className="options-menu">
+            <NavLink
+              className="link-menu"
+              activeclassname="active"
+              to='/sobremim'
+            >
+              Sobre mim
+            </NavLink>
+          </div>
+          <div className="options-menu">
+            <NavLink
+              className="link-menu"
+              activeclassname="active"
+              to='/contato'
+            >
+              Contato
+            </NavLink>
+          </div>
+          <div className="options-menu">
+            <NavLink
+              className="link-menu"
+              activeclassname="active"
+              to='/projetos'
+            >
+              Projetos
+            </NavLink>
+          </div>
+
         </div>
       </div>
     </div>

@@ -21,7 +21,6 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-  /* opacity: 80%; */
 }
 
 /* Estilo do título */
@@ -30,7 +29,6 @@
   font-size: x-large;
   margin-bottom: 20px;
   text-align: center;
-
 }
 
 .form-div-send-email {
@@ -40,6 +38,7 @@
   justify-content: center;
   align-items: center;
 }
+
 /* Formulário */
 .form-div-send-email form {
   width: 90%;
@@ -70,7 +69,6 @@
   margin-bottom: 15px;
   color: var(--light-cyan-2);
   font-family: 'Orbitron', sans-serif;
-
 }
 
 .form-div-send-email label input,
@@ -147,19 +145,75 @@ textarea {
   transform: scale(1.3);
 }
 
-/* Responsividade */
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+  .div-contatcs {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .form-div-send-email {
+    width: 100%;
+  }
+
+  .contacts-title {
+    font-size: 1.5rem;
+  }
+
+  .form-div-send-email form {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+/* Ajuste para telas pequenas */
 @media (max-width: 768px) {
   .div-contatcs {
     width: 90%;
     padding: 10px;
+    max-height: none; /* Remove a limitação de altura */
+  }
+
+  .form-div-send-email {
+    width: 100%;
+    overflow-y: auto; /* Permite o scroll vertical */
+    max-height: 70vh; /* Limita a altura visível para não ocupar toda a tela */
   }
 
   .form-div-send-email form {
     width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: visible; /* Garante que o formulário e botão fiquem visíveis */
   }
 
   .contacts-title {
     font-size: 1.2rem;
   }
+
+  .send-button {
+    position: static; /* Garante que o botão não seja afetado por outros estilos */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do botão para evitar sobreposição */
+  }
 }
 
+
+@media (max-width: 480px) {
+  .contacts-title {
+    font-size: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .send-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .icons {
+    width: 25px;
+  }
+}

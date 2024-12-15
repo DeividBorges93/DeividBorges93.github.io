@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-wrap: wrap; /* Permite que os cards se ajustem em linhas */
 }
 
 .arrow {
@@ -118,26 +119,67 @@
   letter-spacing: -0.5px;
 }
 
-@media screen and (max-width: 768px) {
-  .project-image {
-    max-width: 200px;
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  .card-projects {
+    max-width: 70%;
   }
 
+  .project-image {
+    max-width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .container-projects {
     flex-direction: column;
-    overflow-y: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
   }
 
   .card-container {
     overflow-y: auto;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .arrow {
-    display: none;
+    display: none; /* Esconde setas em dispositivos móveis */
   }
 
   .card-projects {
     max-width: 80%;
+    margin: 10px;
+  }
+
+  .project-image {
+    max-width: 180px;
+  }
+
+  .project-link, .project-title {
+    font-size: medium;
+  }
+
+  .description {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-projects {
+    max-width: 90%;
+  }
+
+  .project-image {
+    max-width: 150px;
+  }
+
+  .project-link, .project-title {
+    font-size: small;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    padding: 0 10px;
   }
 }

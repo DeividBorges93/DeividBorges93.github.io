@@ -9,6 +9,14 @@
 
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Evita o scroll horizontal */
+  box-sizing: border-box; /* Inclui as bordas no cálculo de largura/altura */
+}
+
 * {
   padding: 0;
   margin: 0;

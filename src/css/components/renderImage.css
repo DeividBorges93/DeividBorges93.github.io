@@ -8,7 +8,17 @@
 .logo-img-home {
   width: 250px;
   margin-left: 44%;
-  margin-top: 30px;
+  margin-top: -100px;
+}
+
+.text-home {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  top: 35vh; /* Ajuste dinâmico */
+  left: -18%;
+  font-size: 4vw; /* Baseado na largura da tela */
+  text-align: center; /* Centraliza o texto */
+  color: var(--dark-green-3);
 }
 
 .render-images {
@@ -16,14 +26,62 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  height: 20vh;
+  height: 10vh;
+  background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
+
+  /* opacity: 90%; */
+}
+
+.div-icon-image {
+  background: linear-gradient(180deg, var(--dark-green-1), 35%, var(--dark-green-2) 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+
+}
+
+.div-icon-image:hover {
+  transform: scale(1.2);
 }
 
 .stack-logo {
-  width: 50px;
-  transition: transform 0.3s ease;
+  width: 40px;
+  padding: 5px;
+  transition: transform 0.2s ease;
 }
 
 .stack-logo:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
+}
+
+
+/* Media Queries para Limitar o Tamanho da Fonte */
+@media (max-width: 1200px) {
+  .text-home {
+    font-size: 40px; /* Define um máximo para telas grandes */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-home {
+    font-size: 30px; /* Reduz o tamanho para telas médias */
+    left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-home {
+    font-size: 24px; /* Ajuste para telas pequenas */
+    left: 0;
+  }
+
+  .logo-img-home {
+    width: 150px;
+    margin-left: 0%;
+    margin-top: -100%;
+  }
+  .render-images {
+    background: none;
+  }
+
 }
