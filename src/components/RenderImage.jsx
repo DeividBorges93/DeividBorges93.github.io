@@ -87,12 +87,15 @@ export default function RenderImages() {
 
   return (
     <div className='container-home-page' id='content'>
+      <div className="text-home">
+        <p>Desenvolvedor Web.  FULL STACK</p>
+      </div>
       <div className="div-logo-home">
         <img src={logoDeivid} alt="logo-deivid" className="logo-img-home" />
       </div>
       <div className="render-images">
-        {objLogosStacks.map((icon) => (
-          <div className="div-icon-image" id={icon.name}>
+        {objLogosStacks.map((icon, index) => (
+          <div className={`div-icon-image ${index}`} id={icon.name}>
             <a href={icon.href} target='blank' className="link-stacks" rel="noopener noreferrer">
               <img src={icon.src} alt="stacks icon" className="stack-logo" />
             </a>
