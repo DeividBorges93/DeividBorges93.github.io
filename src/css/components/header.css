@@ -64,10 +64,10 @@
   .btn-menu-hamburguer {
     display: block;
     z-index: 99;
-    background-color: transparent;
+    background-color: var(--dark-green-1);
     border: none;
     cursor: pointer;
-    color: var(--light-cyan-3);
+    color: var(--light-cyan-2);
   }
 
   .container-header {
