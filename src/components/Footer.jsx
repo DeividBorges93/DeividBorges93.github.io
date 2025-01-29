@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-footer">
         <div className="text-dev-by">
           <p>Desenvolvido por:</p>
-          <a href="https://deividborges93.github.io" target='blank' rel="noopener noreferrer" className="link-my-portfolio">
+          <a href="https://deividborges.dev.br" target='blank' rel="noopener noreferrer" className="link-my-portfolio">
             <img src={LogoDeivid} alt="Logo deivid borges" className="logo-deivid" />
           </a>
         </div>
