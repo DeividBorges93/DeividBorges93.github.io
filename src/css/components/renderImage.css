@@ -28,8 +28,6 @@
   align-items: center;
   height: 10vh;
   background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
-
-  /* opacity: 90%; */
 }
 
 .div-icon-image {
@@ -37,7 +35,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   border-radius: 10px;
-
 }
 
 .div-icon-image:hover {
@@ -54,7 +51,6 @@
   transform: scale(1.05);
 }
 
-
 /* Media Queries para Limitar o Tamanho da Fonte */
 @media (max-width: 1200px) {
   .text-home {
@@ -66,6 +62,12 @@
   .text-home {
     font-size: 30px; /* Reduz o tamanho para telas médias */
     left: 5%;
+  }
+
+  /* Ajuste da renderização de imagens e ícones */
+  .render-images {
+    height: auto; /* Garante que o conteúdo ocupe o espaço necessário */
+    padding-bottom: 10px; /* Espaço extra para evitar sobrecarga do layout */
   }
 }
 
@@ -80,9 +82,11 @@
     margin-left: 0%;
     margin-top: -100%;
   }
-  .render-images {
-    background: none;
-    margin-bottom: 100px;
-  }
 
+  /* Ajuste para o layout em dispositivos móveis */
+  .render-images {
+    background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
+    height: auto; /* Garante que o fundo cubra o conteúdo sem espaços extras */
+    padding-bottom: 10px; /* Espaço para evitar o aparecimento da barra branca */
+  }
 }
