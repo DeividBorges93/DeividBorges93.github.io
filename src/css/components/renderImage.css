@@ -28,8 +28,6 @@
   align-items: center;
   height: 10vh;
   background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
-
-  /* opacity: 90%; */
 }
 
 .div-icon-image {
@@ -65,6 +63,12 @@
     font-size: 30px; /* Reduz o tamanho para telas médias */
     left: 5%;
   }
+
+  /* Ajuste da renderização de imagens e ícones */
+  .render-images {
+    height: auto; /* Garante que o conteúdo ocupe o espaço necessário */
+    padding-bottom: 10px; /* Espaço extra para evitar sobrecarga do layout */
+  }
 }
 
 @media (max-width: 480px) {
@@ -80,10 +84,10 @@
   }
 
   .render-images {
-    background: none;
-    margin-bottom: 100px;
+    background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
+    height: auto; /* Garante que o fundo cubra o conteúdo sem espaços extras */
+    padding-bottom: 10px; /* Espaço para evitar o aparecimento da barra branca */
   }
-  
 }
 
 @media (max-width: 480px) {

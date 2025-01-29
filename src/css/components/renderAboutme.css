@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .text-div-about-me {
@@ -34,7 +35,6 @@
   font-size: large;
   background-color: var(--dark-blue); /* Cor do balão */
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin: 20px 10px; /* Espaçamento geral */
   max-width: 600px;
   position: relative;
@@ -42,7 +42,7 @@
 
 /* Balões para a esquerda */
 .about-me-text:nth-of-type(odd) {
-  margin-left: 0;
+  margin-left: 500;
   margin-right: auto; /* Empurra o balão para a esquerda */
   text-align: left;
 }
@@ -50,13 +50,19 @@
 /* Balões para a direita */
 .about-me-text:nth-of-type(even) {
   margin-left: auto; /* Empurra o balão para a direita */
-  margin-right: 0;
+  margin-right: 500;
   text-align: right;
 }
 
-
-
-
 .paragraph {
   line-height: 150%;
+}
+
+@media (max-width: 480px) {
+  .about-me-text p,
+  .about-me-text li {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
