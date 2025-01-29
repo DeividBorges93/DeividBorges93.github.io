@@ -54,9 +54,15 @@
   text-align: right;
 }
 
-
-
-
 .paragraph {
   line-height: 150%;
+}
+
+@media (max-width: 480px) {
+  .about-me-text p,
+  .about-me-text li {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
