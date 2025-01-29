@@ -83,10 +83,15 @@
     margin-top: -100%;
   }
 
-  /* Ajuste para o layout em dispositivos móveis */
   .render-images {
     background: linear-gradient(180deg, var(--dark-green-2), 35%, var(--dark-green-1) 100%);
     height: auto; /* Garante que o fundo cubra o conteúdo sem espaços extras */
     padding-bottom: 10px; /* Espaço para evitar o aparecimento da barra branca */
+  }
+}
+
+@media (max-width: 480px) {
+  .render-images {
+    margin-top: -100px; /* Move ainda mais para cima */
   }
 }
